@@ -1,5 +1,4 @@
-docker-webapp
-===========
+# docker-webapp
 
 - nginx
 - passenger 4.0.41
@@ -8,8 +7,7 @@ docker-webapp
 For more versions see Dockerfile.
 
 
-Getting Started
----------------
+## Getting Started
 
 Get the image via index.docker.io
 
@@ -26,6 +24,12 @@ Get the image via index.docker.io
         $ curl http://127.0.0.1:8181 # Test with curl or even better your favorite browser
 
 
-  For more information see https://index.docker.io/u/networld/docker-webapp/ and
+## Boot Script
+
+If available the script `init.sh` under the root directory of the web application is executed during boot time (`/webapp/init.sh`). This script can be used to setup additional components or tasks, e.g. adding cronjobs or starting background workers.
+
+**Important:** Assure that the script is idempotent. That means if executed multiple times it does not change the result. Also keep in mind that the script is executed on each boot and before the web server nginx is started.
+
+For more information see https://index.docker.io/u/networld/docker-webapp/ and
 the source code under https://github.com/networld-to/docker-webapp
 
