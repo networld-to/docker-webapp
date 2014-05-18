@@ -33,7 +33,7 @@ RUN apt-get -y install cron curl libcurl4-gnutls-dev git libxslt-dev libxml2-dev
 RUN (\curl -sSL http://get.rvm.io | bash -s stable --rails); echo 0
 RUN echo 'source /usr/local/rvm/scripts/rvm' >> /etc/bash.bashrc
 RUN /bin/bash -l -c 'rvm requirements'
-RUN /bin/bash -l -c 'rvm install 2.1.1 && rvm use 2.1.1 --default'
+RUN /bin/bash -l -c 'rvm install 2.1.2 && rvm use 2.1.2 --default'
 RUN /bin/bash -l -c 'rvm rubygems current'
 
 RUN /bin/bash -l -c 'gem install passenger --version 4.0.41'

@@ -3,7 +3,7 @@ docker-webapp
 
 - nginx
 - passenger 4.0.41
-- ruby 2.1.1
+- ruby 2.1.2
 
 For more versions see Dockerfile.
 
